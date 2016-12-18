@@ -44,6 +44,9 @@
 		00EAB76F1E0485A90024949E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; };
 		00EAB7701E0485A90024949E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00EAB7721E0488700024949E /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7711E0488700024949E /* Purchase.swift */; };
+		C27ED3EE1E05B54700B08A65 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3ED1E05B54700B08A65 /* Alert.swift */; };
+		C27ED3F11E05BBE100B08A65 /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */; };
+		C27ED3F31E05BC4A00B08A65 /* PurchaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3F21E05BC4A00B08A65 /* PurchaseListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +102,9 @@
 		00EAB76A1E0485A60024949E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		00EAB76E1E0485A90024949E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		00EAB7711E0488700024949E /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		C27ED3ED1E05B54700B08A65 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
+		C27ED3F21E05BC4A00B08A65 /* PurchaseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,7 @@
 				003837911E01BB1100F28163 /* PokemonListController.swift */,
 				003837A61E01EC7500F28163 /* PokemonDetailController.swift */,
 				00EAB75C1E0338AF0024949E /* StoreController.swift */,
+				C27ED3F21E05BC4A00B08A65 /* PurchaseListController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 				008A08BC1E00729A001BB1F9 /* Do.swift */,
 				008A08BD1E00729A001BB1F9 /* URLS.swift */,
 				008A08BE1E00729A001BB1F9 /* Formatter.swift */,
+				C27ED3ED1E05B54700B08A65 /* Alert.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 		008A08D01E007434001BB1F9 /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */,
 			);
 			name = Purchase;
 			sourceTree = "<group>";
@@ -306,7 +315,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = DEVELMS;
 				TargetAttributes = {
 					008A08A01E007121001BB1F9 = {
@@ -369,8 +378,11 @@
 				00EAB7721E0488700024949E /* Purchase.swift in Sources */,
 				00EAB75D1E0338AF0024949E /* StoreController.swift in Sources */,
 				003837941E01BB9A00F28163 /* ApplicationController.swift in Sources */,
+				C27ED3F11E05BBE100B08A65 /* PurchaseCell.swift in Sources */,
 				00EAB75B1E032DBD0024949E /* UIColorExtension.swift in Sources */,
+				C27ED3F31E05BC4A00B08A65 /* PurchaseListController.swift in Sources */,
 				0038379F1E01D7EE00F28163 /* UIImageView+SwiftyGif.swift in Sources */,
+				C27ED3EE1E05B54700B08A65 /* Alert.swift in Sources */,
 				003837961E01BCB600F28163 /* CollectionCell.swift in Sources */,
 				008A08CC1E007372001BB1F9 /* Section.swift in Sources */,
 				003837921E01BB1100F28163 /* PokemonListController.swift in Sources */,
@@ -425,6 +437,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -475,6 +488,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

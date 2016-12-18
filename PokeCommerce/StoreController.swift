@@ -80,12 +80,19 @@ class StoreController: UITableViewController {
         purchase.userName = "Nerd Stark"
         purchase.cardNumber = "0000 0000 0000 0000"
         purchase.date = Formatter.currentDate()
-        purchase.image = pokemonImage?.image
+        
+        if let image = pokemonImage?.image {
+            purchase.image = UIImagePNGRepresentation(image) as NSData?
+        }
         
         let realm = try! Realm()
         
-        print(purchase)
-        
-        try! realm.write { realm.add(purchase) }
+        try! realm.write {
+            
+            realm.add(purchase)
+            Alert.show(title: "Parabéns", message: "\(purchase.name) comprado!", delegate: self) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
     }
 }

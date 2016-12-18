@@ -56,21 +56,10 @@ class ApplicationController: UIViewController {
             
         }, fail: { failure in
             self.stopGif()
-            self.showAlert(message: failure)
+            Alert.show(title: ":(", message: failure, buttonTitle: "Tentar novamente", delegate: self) {
+                self.downloadContent()
+            }
         })
-    }
-    
-    fileprivate func showAlert(message: String) {
-        
-        let alert = UIAlertController(title: ":(", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Tentar novamente", style: UIAlertActionStyle.default) {
-            action in
-            
-            self.downloadContent()
-        })
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     fileprivate func presentNavigation() {

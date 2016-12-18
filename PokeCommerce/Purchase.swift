@@ -16,5 +16,5 @@ class Purchase: Object {
     dynamic var userName = ""
     dynamic var cardNumber = ""
     dynamic var date = ""
-    dynamic var image: UIImage? = nil
+    dynamic var image: NSData? = nil
 }

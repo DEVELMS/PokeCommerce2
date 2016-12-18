@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tcG-5F-9bT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tcG-5F-9bT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,7 +42,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball_background" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-cT-wX4">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball_background" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-cT-wX4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tep-nC-wma">
@@ -105,6 +105,9 @@
                                 <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="list_button"/>
+                                <connections>
+                                    <segue destination="uWX-U3-zYn" kind="show" id="Syt-su-i6I"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -115,6 +118,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2O-qR-7bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="-590.55472263868069"/>
+        </scene>
+        <!--Purchase List Controller-->
+        <scene sceneID="AnZ-Ku-2BY">
+            <objects>
+                <tableViewController id="uWX-U3-zYn" customClass="PurchaseListController" customModule="PokeCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="WCL-hL-ozL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PurchaseCell" rowHeight="170" id="1Zn-ds-bzc" customClass="PurchaseCell" customModule="PokeCommerce" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zn-ds-bzc" id="vjR-j7-MJC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase-background" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-wI-MXw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="YHs-To-CEg">
+                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="3o5-JI-1qT"/>
+                                                <constraint firstAttribute="height" constant="100" id="zSi-oz-F87"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqp-TI-2U6">
+                                            <rect key="frame" x="10" y="115" width="44.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyP-te-zn8">
+                                            <rect key="frame" x="10" y="139.5" width="33" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq3-zU-VcQ">
+                                            <rect key="frame" x="278" y="10" width="87" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64w-sv-TJ3">
+                                            <rect key="frame" x="324" y="35" width="41" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-Zb-aKC">
+                                            <rect key="frame" x="270" y="61" width="95" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rq-2E-GbZ">
+                                            <rect key="frame" x="309" y="86" width="56" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-hM-7oA">
+                                            <rect key="frame" x="334" y="139.5" width="31" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hq3-zU-VcQ" firstAttribute="top" secondItem="YHs-To-CEg" secondAttribute="top" id="0OZ-BP-t5u"/>
+                                        <constraint firstItem="mvN-hM-7oA" firstAttribute="trailing" secondItem="4rq-2E-GbZ" secondAttribute="trailing" id="116-kz-GXT"/>
+                                        <constraint firstItem="Q5G-wI-MXw" firstAttribute="top" secondItem="vjR-j7-MJC" secondAttribute="top" id="2C2-rE-qNg"/>
+                                        <constraint firstAttribute="bottom" secondItem="Q5G-wI-MXw" secondAttribute="bottom" id="2tW-h5-Zis"/>
+                                        <constraint firstItem="Dhd-Zb-aKC" firstAttribute="trailing" secondItem="64w-sv-TJ3" secondAttribute="trailing" id="7ZG-qo-XsV"/>
+                                        <constraint firstAttribute="trailing" secondItem="Q5G-wI-MXw" secondAttribute="trailing" id="Fwy-8D-7nX"/>
+                                        <constraint firstItem="64w-sv-TJ3" firstAttribute="trailing" secondItem="Hq3-zU-VcQ" secondAttribute="trailing" id="Ih5-68-64y"/>
+                                        <constraint firstItem="MyP-te-zn8" firstAttribute="leading" secondItem="Pqp-TI-2U6" secondAttribute="leading" id="J1n-re-SLf"/>
+                                        <constraint firstItem="Pqp-TI-2U6" firstAttribute="top" secondItem="YHs-To-CEg" secondAttribute="bottom" constant="5" id="Oeu-1o-k7o"/>
+                                        <constraint firstItem="4rq-2E-GbZ" firstAttribute="top" secondItem="Dhd-Zb-aKC" secondAttribute="bottom" constant="5" id="Pog-Cq-Nkt"/>
+                                        <constraint firstItem="64w-sv-TJ3" firstAttribute="top" secondItem="Hq3-zU-VcQ" secondAttribute="bottom" constant="5" id="STJ-iV-uu5"/>
+                                        <constraint firstItem="Q5G-wI-MXw" firstAttribute="leading" secondItem="vjR-j7-MJC" secondAttribute="leading" id="XMl-CU-RnG"/>
+                                        <constraint firstItem="YHs-To-CEg" firstAttribute="top" secondItem="vjR-j7-MJC" secondAttribute="top" constant="10" id="XzA-Vo-AuD"/>
+                                        <constraint firstItem="MyP-te-zn8" firstAttribute="top" secondItem="Pqp-TI-2U6" secondAttribute="bottom" constant="5" id="Zz3-e2-cNC"/>
+                                        <constraint firstItem="Pqp-TI-2U6" firstAttribute="leading" secondItem="YHs-To-CEg" secondAttribute="leading" id="axJ-xt-wVz"/>
+                                        <constraint firstItem="4rq-2E-GbZ" firstAttribute="trailing" secondItem="Dhd-Zb-aKC" secondAttribute="trailing" id="cHi-Mp-L0Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hq3-zU-VcQ" secondAttribute="trailing" constant="10" id="gVo-6x-ylw"/>
+                                        <constraint firstItem="mvN-hM-7oA" firstAttribute="top" secondItem="MyP-te-zn8" secondAttribute="top" id="lRW-Lw-sx5"/>
+                                        <constraint firstItem="Dhd-Zb-aKC" firstAttribute="top" secondItem="64w-sv-TJ3" secondAttribute="bottom" constant="8" id="ugS-G9-anq"/>
+                                        <constraint firstItem="YHs-To-CEg" firstAttribute="leading" secondItem="vjR-j7-MJC" secondAttribute="leading" constant="10" id="zg0-db-hsZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="buyerName" destination="64w-sv-TJ3" id="tWB-d8-MGC"/>
+                                    <outlet property="cardNumber" destination="4rq-2E-GbZ" id="zhJ-hw-QHX"/>
+                                    <outlet property="date" destination="mvN-hM-7oA" id="0vX-g1-nV9"/>
+                                    <outlet property="name" destination="Pqp-TI-2U6" id="fqH-Gs-kPB"/>
+                                    <outlet property="pokemonImage" destination="YHs-To-CEg" id="eR4-bu-Khh"/>
+                                    <outlet property="price" destination="MyP-te-zn8" id="5Vy-RR-l4o"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uWX-U3-zYn" id="CEf-Ql-9PH"/>
+                            <outlet property="delegate" destination="uWX-U3-zYn" id="fCl-bs-R5I"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDQ-9s-389" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="-1275.1124437781111"/>
         </scene>
         <!--Pokemon Detail Controller-->
         <scene sceneID="Ajw-ZK-BHj">
@@ -206,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXa-qJ-8pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997.60000000000002" y="-592.35382308845578"/>
+            <point key="canvasLocation" x="990" y="-591"/>
         </scene>
         <!--Store Controller-->
         <scene sceneID="ZNF-XC-Per">
@@ -431,7 +547,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="RJh-4O-LLz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="RJh-4O-LLz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -475,5 +591,6 @@
         <image name="list_button" width="22" height="22"/>
         <image name="placeholder" width="187" height="166"/>
         <image name="pokeball_background" width="640" height="360"/>
+        <image name="purchase-background" width="400" height="225"/>
     </resources>
 </document>
