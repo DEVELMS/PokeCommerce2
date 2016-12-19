@@ -44,6 +44,10 @@
 		00EAB76F1E0485A90024949E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; };
 		00EAB7701E0485A90024949E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00EAB7721E0488700024949E /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7711E0488700024949E /* Purchase.swift */; };
+		00EAB77A1E0834D10024949E /* CreditCardModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7781E0834D10024949E /* CreditCardModal.swift */; };
+		00EAB77B1E0834D10024949E /* CreditCardModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00EAB7791E0834D10024949E /* CreditCardModal.xib */; };
+		00EAB77D1E084C0E0024949E /* Buying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB77C1E084C0E0024949E /* Buying.swift */; };
+		00EAB7811E08886A0024949E /* VSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7801E08886A0024949E /* VSTextField.swift */; };
 		C27ED3EE1E05B54700B08A65 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3ED1E05B54700B08A65 /* Alert.swift */; };
 		C27ED3F11E05BBE100B08A65 /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */; };
 		C27ED3F31E05BC4A00B08A65 /* PurchaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ED3F21E05BC4A00B08A65 /* PurchaseListController.swift */; };
@@ -102,6 +106,10 @@
 		00EAB76A1E0485A60024949E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		00EAB76E1E0485A90024949E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		00EAB7711E0488700024949E /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		00EAB7781E0834D10024949E /* CreditCardModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardModal.swift; sourceTree = "<group>"; };
+		00EAB7791E0834D10024949E /* CreditCardModal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardModal.xib; sourceTree = "<group>"; };
+		00EAB77C1E084C0E0024949E /* Buying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buying.swift; sourceTree = "<group>"; };
+		00EAB7801E08886A0024949E /* VSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSTextField.swift; sourceTree = "<group>"; };
 		C27ED3ED1E05B54700B08A65 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
 		C27ED3F21E05BC4A00B08A65 /* PurchaseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseListController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 				003837A01E01D7F100F28163 /* SwiftyGif */,
 				003837861E0192C200F28163 /* Just.swift */,
 				003837891E01AD5A00F28163 /* SwiftyJSON.swift */,
+				00EAB7801E08886A0024949E /* VSTextField.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -210,7 +219,8 @@
 				008A08A81E007121001BB1F9 /* Main.storyboard */,
 				008A08AD1E007121001BB1F9 /* LaunchScreen.storyboard */,
 				008A08D11E00748E001BB1F9 /* Pokemon List */,
-				008A08D01E007434001BB1F9 /* Purchase */,
+				008A08D01E007434001BB1F9 /* Purchase List */,
+				00EAB7731E0834430024949E /* Purchase */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -256,17 +266,18 @@
 			isa = PBXGroup;
 			children = (
 				008A08C41E0072DD001BB1F9 /* RequestProtocol.swift */,
+				00EAB77C1E084C0E0024949E /* Buying.swift */,
 			);
 			name = Protocols;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		008A08D01E007434001BB1F9 /* Purchase */ = {
+		008A08D01E007434001BB1F9 /* Purchase List */ = {
 			isa = PBXGroup;
 			children = (
 				C27ED3F01E05BBE100B08A65 /* PurchaseCell.swift */,
 			);
-			name = Purchase;
+			name = "Purchase List";
 			sourceTree = "<group>";
 		};
 		008A08D11E00748E001BB1F9 /* Pokemon List */ = {
@@ -285,6 +296,15 @@
 				00EAB76E1E0485A90024949E /* Realm.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00EAB7731E0834430024949E /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				00EAB7781E0834D10024949E /* CreditCardModal.swift */,
+				00EAB7791E0834D10024949E /* CreditCardModal.xib */,
+			);
+			name = Purchase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EAB77B1E0834D10024949E /* CreditCardModal.xib in Resources */,
 				008A08AF1E007121001BB1F9 /* LaunchScreen.storyboard in Resources */,
 				008A08AC1E007121001BB1F9 /* Assets.xcassets in Resources */,
 				003837A31E01DC7000F28163 /* pokeball.gif in Resources */,
@@ -371,8 +392,10 @@
 				008A08DA1E00750F001BB1F9 /* PokemonCollectionCell.swift in Sources */,
 				003837871E0192C200F28163 /* Just.swift in Sources */,
 				003837A71E01EC7500F28163 /* PokemonDetailController.swift in Sources */,
+				00EAB7811E08886A0024949E /* VSTextField.swift in Sources */,
 				008A08CF1E007391001BB1F9 /* ApplicationService.swift in Sources */,
 				008A08C71E007302001BB1F9 /* Request.swift in Sources */,
+				00EAB77A1E0834D10024949E /* CreditCardModal.swift in Sources */,
 				0038378C1E01ADA800F28163 /* SectionService.swift in Sources */,
 				008A08C21E00729A001BB1F9 /* Formatter.swift in Sources */,
 				00EAB7721E0488700024949E /* Purchase.swift in Sources */,
@@ -380,6 +403,7 @@
 				003837941E01BB9A00F28163 /* ApplicationController.swift in Sources */,
 				C27ED3F11E05BBE100B08A65 /* PurchaseCell.swift in Sources */,
 				00EAB75B1E032DBD0024949E /* UIColorExtension.swift in Sources */,
+				00EAB77D1E084C0E0024949E /* Buying.swift in Sources */,
 				C27ED3F31E05BC4A00B08A65 /* PurchaseListController.swift in Sources */,
 				0038379F1E01D7EE00F28163 /* UIImageView+SwiftyGif.swift in Sources */,
 				C27ED3EE1E05B54700B08A65 /* Alert.swift in Sources */,

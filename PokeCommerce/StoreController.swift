@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class StoreController: UITableViewController {
+class StoreController: UITableViewController, Buying {
 
     @IBOutlet weak var pokemonCell: UITableViewCell!
     @IBOutlet weak var nameCell: UITableViewCell!
@@ -20,16 +20,21 @@ class StoreController: UITableViewController {
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var cardNumber: UITextField!
+    @IBOutlet weak var cardNumber: VSTextField!
+    @IBOutlet weak var CCV: UITextField!
     @IBOutlet weak var cardMonth: UITextField!
     @IBOutlet weak var cardYear: UITextField!
     
+    lazy var creditCardModal: CreditCardModal = CreditCardModal(nibName: CreditCardModal.identifier, bundle: nil)
     var pokemon: Pokemon?
     var priceString = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        creditCardModal.delegate = self
+        cardNumber.setFormatting("####-####-####-####", replacementChar: "#")
+        
         setScreenAttributes()
         setContent()
     }
@@ -51,9 +56,7 @@ class StoreController: UITableViewController {
     
     fileprivate func setContent() {
         
-        guard let pokemon = self.pokemon else {
-            return print("pokemon store nil")
-        }
+        guard let pokemon = self.pokemon else { return print("pokemon store nil") }
         
         self.pokemonName.text = pokemon.name
         self.price.text = priceString
@@ -70,9 +73,7 @@ class StoreController: UITableViewController {
     
     @IBAction func buy(_ sender: UIButton) {
         
-        guard let pokemon = self.pokemon else {
-            return print("pokemon store nil")
-        }
+        guard let pokemon = self.pokemon else { return print("pokemon store nil") }
         
         let purchase = Purchase()
         purchase.name = pokemon.name
@@ -84,6 +85,20 @@ class StoreController: UITableViewController {
         if let image = pokemonImage?.image {
             purchase.image = UIImagePNGRepresentation(image) as NSData?
         }
+        
+        creditCardModal.configModal(buyCell, purchase: purchase);
+        self.present(creditCardModal, animated: true)
+    }
+    
+    // MARK: UIPopoverPresentationDelegate
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    // MARK: Buying Delegate
+    
+    func buyConfirmed(purchase: Purchase) {
         
         let realm = try! Realm()
         
