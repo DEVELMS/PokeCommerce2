@@ -42,7 +42,7 @@ class StoreController: UITableViewController, Buying {
         setContent()
     }
     
-    fileprivate func setScreenAttributes() {
+    private func setScreenAttributes() {
     
         self.title = "Store"
         
@@ -56,28 +56,26 @@ class StoreController: UITableViewController, Buying {
         cardExperationCell.backgroundColor = .clear
         buyCell.backgroundColor = .clear
         
-        tableView.keyboardDismissMode = .onDrag
-        
-//        addDoneButton()
+        hideKeyboardWhenTappedAround()
     }
     
-    fileprivate func addDoneButton() {
-        
-        let keyboardToolbar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 0, height: 44)))
-        keyboardToolbar.sizeToFit()
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let doneBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "closeDown"), style: UIBarButtonItemStyle.done, target: view, action: #selector(UIView.endEditing(_:)))
-        
-        keyboardToolbar.items = [flexBarButton, doneBarButton]
-        
-        cardNumber.inputAccessoryView = keyboardToolbar
-        cardMonth.inputAccessoryView = keyboardToolbar
-        cardYear.inputAccessoryView = keyboardToolbar
-        CCV.inputAccessoryView = keyboardToolbar
-    }
+//    private func addDoneButton() {
+//        
+//        let keyboardToolbar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 0, height: 44)))
+//        keyboardToolbar.sizeToFit()
+//        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+//        
+//        let doneBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "closeDown"), style: UIBarButtonItemStyle.done, target: view, action: #selector(UIView.endEditing(_:)))
+//        
+//        keyboardToolbar.items = [flexBarButton, doneBarButton]
+//        
+//        cardNumber.inputAccessoryView = keyboardToolbar
+//        cardMonth.inputAccessoryView = keyboardToolbar
+//        cardYear.inputAccessoryView = keyboardToolbar
+//        CCV.inputAccessoryView = keyboardToolbar
+//    }
     
-    fileprivate func setContent() {
+    private func setContent() {
         
         guard let pokemon = self.pokemon else { return print("pokemon store nil") }
         
@@ -127,7 +125,7 @@ class StoreController: UITableViewController, Buying {
         else { cardExperationCell.backgroundColor = .clear }
     }
     
-    @IBAction func buy(_ sender: UIButton) {
+    @IBAction internal func buy(_ sender: UIButton) {
         
         guard let pokemon = self.pokemon else { return print("pokemon store nil") }
         
@@ -151,35 +149,51 @@ class StoreController: UITableViewController, Buying {
             self.present(creditCardModal, animated: true)
         }
         else {
-            Alert.show(title: "Ué?", message: "Você deve preencher todos os campos para efetuar a transação, espertinho :)", buttonTitle: "OK", delegate: self) { }
+            Alert.show(delegate: self, title: "Ué?", message: "Você deve preencher todos os campos para efetuar a transação, espertinho :)", buttonTitle: "OK") { _ in }
         }
     }
     
     // MARK - TextField Delegate
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
     // MARK: UIPopoverPresentationDelegate
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+    internal func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
     
     // MARK: Buying Delegate
     
-    func buyConfirmed(purchase: Purchase) {
+    internal func buyConfirmed(purchase: Purchase) {
         
         let realm = try! Realm()
         
         try! realm.write {
             
             realm.add(purchase)
-            Alert.show(title: "Parabéns", message: "\(purchase.name) comprado pela bagatela de \(purchase.price), enjoy it :)", delegate: self) {
+            Alert.show(delegate: self, title: "Parabéns", message: "\(purchase.name) comprado pela bagatela de \(purchase.price), enjoy it :)") { _ in
                 self.navigationController?.popToRootViewController(animated: true)
             }
         }
+    }
+}
+
+// MARK: Keyboard Extension
+
+extension StoreController {
+    
+    fileprivate func hideKeyboardWhenTappedAround() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StoreController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc fileprivate func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
 }

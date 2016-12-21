@@ -11,6 +11,7 @@ import RealmSwift
 
 class PurchaseListController: UITableViewController {
 
+    fileprivate var dataBase: Realm?
     fileprivate var purchases: RealmSwift.Results<Purchase>?
     
     override func viewDidLoad() {
@@ -18,14 +19,55 @@ class PurchaseListController: UITableViewController {
 
         self.title = "Purchases"
         
-        let realm = try! Realm()
-        purchases = realm.objects(Purchase.self).sorted(byProperty: "date", ascending: false)
+        dataBase = try! Realm()
+        
+        addRightBarButtonItems()
+        updateData()
+    }
+    
+    fileprivate func addRightBarButtonItems() {
+        
+        let cleanItem = UIBarButtonItem(title: "Clean", style: .plain, target: self, action: #selector(self.cleanPurchases))
+        cleanItem.tintColor = .white
+        
+        self.navigationItem.setRightBarButtonItems([cleanItem], animated: true)
     }
 
+    fileprivate func updateData() {
+    
+        guard let dataBase = self.dataBase else { return }
+        
+        purchases = dataBase.objects(Purchase.self).sorted(byProperty: "date", ascending: false)
+        
+        tableView.reloadData()
+    }
+    
+    @objc fileprivate func cleanPurchases() {
+        
+        if purchases?.count == 0 {
+            
+            Alert.show(delegate: self, title: ";)", message: "You haven't purchases yet.", buttonTitle: "OK") { _ in }
+        }
+        else {
+            
+            Alert.show(delegate: self, title: "Are you sure?", message: "You will delete all your purchases doing this.", buttonTitle: "OK", hasChoice: true) { choice in
+                
+                if choice {
+                    
+                    guard let dataBase = self.dataBase else { return }
+                    
+                    try! dataBase.write { dataBase.deleteAll() }
+                    
+                    self.updateData()
+                }
+            }
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 210
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,5 +91,23 @@ class PurchaseListController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseCell.identifier, for: indexPath) as! PurchaseCell
         cell.setContent(purchase: purchases[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard let purchases = self.purchases, let dataBase = self.dataBase else { return }
+        
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            
+            try! dataBase.write {
+                dataBase.delete(purchases[indexPath.row])
+            }
+            
+            updateData()
+        }
     }
 }

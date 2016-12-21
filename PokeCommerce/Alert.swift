@@ -10,7 +10,7 @@ import UIKit
 
 struct Alert {
     
-    static func show(title: String, message: String, buttonTitle: String? = nil, delegate: AnyObject, ok: @escaping () -> Void) {
+    static func show(delegate: AnyObject,title: String, message: String, buttonTitle: String? = nil, hasChoice: Bool? = nil, ok: @escaping (Bool) -> Void) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
@@ -19,8 +19,16 @@ struct Alert {
         
         alert.addAction(UIAlertAction(title: aux, style: UIAlertActionStyle.default) {
             action in
-            ok()
+            ok(true)
         })
+        
+        if let choice = hasChoice, choice {
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default) {
+                action in
+                ok(false)
+            })
+        }
         
         delegate.present(alert, animated: true, completion: nil)
     }

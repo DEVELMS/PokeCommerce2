@@ -56,7 +56,7 @@ class ApplicationController: UIViewController {
             
         }, fail: { failure in
             self.stopGif()
-            Alert.show(title: ":(", message: failure, buttonTitle: "Tentar novamente", delegate: self) {
+            Alert.show(delegate: self, title: ":(", message: failure, buttonTitle: "Tentar novamente") { _ in
                 self.downloadContent()
             }
         })
