@@ -28,9 +28,9 @@ class CreditCardModal: UIViewController {
         
         cardNumber.text = purchase.cardNumber
         clientName.text = purchase.userName
-        CCV.text = "123"
-        month.text = "10"
-        year.text = "12"
+        CCV.text = purchase.ccv
+        month.text = purchase.month
+        year.text = purchase.year
     }
     
     func configModal(_ sender: UIView, purchase: Purchase) {

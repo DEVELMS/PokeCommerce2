@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tcG-5F-9bT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tcG-5F-9bT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Cb-a1-FHW" id="fI4-fG-otj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qd7-Eq-XbP">
@@ -102,7 +103,7 @@
                     <navigationItem key="navigationItem" title="PokeCommerce" id="YbZ-FL-19a">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="zKt-cI-kvT">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vqm-7z-66a">
-                                <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="list_button"/>
                                 <connections>
@@ -133,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zn-ds-bzc" id="vjR-j7-MJC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase-background" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-wI-MXw">
@@ -147,13 +148,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqp-TI-2U6">
-                                            <rect key="frame" x="10" y="115" width="44.5" height="19.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <rect key="frame" x="10" y="115" width="49.5" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyP-te-zn8">
-                                            <rect key="frame" x="10" y="139.5" width="33" height="17"/>
+                                            <rect key="frame" x="10" y="141.5" width="33" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -183,7 +184,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-hM-7oA">
-                                            <rect key="frame" x="279" y="139.5" width="31" height="17"/>
+                                            <rect key="frame" x="279" y="141.5" width="31" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -221,6 +222,36 @@
                                     <outlet property="price" destination="MyP-te-zn8" id="5Vy-RR-l4o"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PurchasesEmpty" rowHeight="170" id="nFF-2V-EuK">
+                                <rect key="frame" x="0.0" y="198" width="320" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFF-2V-EuK" id="5Rh-bu-W1O">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu-sad" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-Xj-uIg">
+                                            <rect key="frame" x="8" y="25" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="jIY-rU-drS"/>
+                                                <constraint firstAttribute="height" constant="120" id="rAd-tA-LYX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't purchases yet." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNV-h5-L4U">
+                                            <rect key="frame" x="140" y="66.5" width="160" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hNV-h5-L4U" firstAttribute="leading" secondItem="4Of-Xj-uIg" secondAttribute="trailing" constant="12" id="Ldi-hL-QQq"/>
+                                        <constraint firstAttribute="trailing" secondItem="hNV-h5-L4U" secondAttribute="trailing" constant="20" id="YTx-JB-tll"/>
+                                        <constraint firstItem="4Of-Xj-uIg" firstAttribute="leading" secondItem="5Rh-bu-W1O" secondAttribute="leadingMargin" id="e1N-Eo-1dA"/>
+                                        <constraint firstItem="4Of-Xj-uIg" firstAttribute="centerY" secondItem="5Rh-bu-W1O" secondAttribute="centerY" id="j4l-Yz-7SH"/>
+                                        <constraint firstItem="hNV-h5-L4U" firstAttribute="centerY" secondItem="4Of-Xj-uIg" secondAttribute="centerY" constant="2" id="l2A-JD-jxg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="uWX-U3-zYn" id="CEf-Ql-9PH"/>
@@ -230,7 +261,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDQ-9s-389" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="-1275.1124437781111"/>
+            <point key="canvasLocation" x="988.125" y="-1276.056338028169"/>
         </scene>
         <!--Pokemon Detail Controller-->
         <scene sceneID="Ajw-ZK-BHj">
@@ -254,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21J-LY-fKa">
-                                <rect key="frame" x="106.5" y="271.5" width="106.5" height="24"/>
+                                <rect key="frame" x="106.5" y="113.5" width="106.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -276,7 +307,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-FZ-kpH">
-                                <rect key="frame" x="134.5" y="303.5" width="50" height="50"/>
+                                <rect key="frame" x="134.5" y="145.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5aL-ki-zoO"/>
                                     <constraint firstAttribute="height" constant="50" id="oao-vc-KiM"/>
@@ -292,11 +323,11 @@
                             <constraint firstItem="u5h-IA-hvf" firstAttribute="leading" secondItem="aUP-Eh-22T" secondAttribute="leading" constant="10" id="1B5-Pu-CWZ"/>
                             <constraint firstItem="wRk-fO-fFo" firstAttribute="leading" secondItem="aUP-Eh-22T" secondAttribute="leading" id="1FP-IG-f7q"/>
                             <constraint firstItem="21J-LY-fKa" firstAttribute="centerX" secondItem="wRk-fO-fFo" secondAttribute="centerX" id="3O1-Sn-lEI"/>
+                            <constraint firstItem="21J-LY-fKa" firstAttribute="top" secondItem="YdX-Nz-bvg" secondAttribute="bottom" constant="20" id="GhE-eN-Y5d"/>
                             <constraint firstItem="wRk-fO-fFo" firstAttribute="top" secondItem="aUP-Eh-22T" secondAttribute="top" id="Ke9-E0-zxe"/>
                             <constraint firstAttribute="trailing" secondItem="YdX-Nz-bvg" secondAttribute="trailing" constant="10" id="V1d-k2-5LL"/>
                             <constraint firstItem="NwG-FZ-kpH" firstAttribute="top" secondItem="21J-LY-fKa" secondAttribute="bottom" constant="8" id="eCN-SB-bI2"/>
                             <constraint firstAttribute="trailing" secondItem="YsM-RZ-t4H" secondAttribute="trailing" constant="10" id="eqs-Hx-3Md"/>
-                            <constraint firstItem="21J-LY-fKa" firstAttribute="centerY" secondItem="wRk-fO-fFo" secondAttribute="centerY" id="fOc-FO-afm"/>
                             <constraint firstAttribute="trailing" secondItem="wRk-fO-fFo" secondAttribute="trailing" id="feM-JZ-iMV"/>
                             <constraint firstItem="cpl-vj-RbN" firstAttribute="top" secondItem="3Uh-cU-b02" secondAttribute="bottom" constant="20" id="gAA-cJ-clj"/>
                             <constraint firstItem="cpl-vj-RbN" firstAttribute="top" secondItem="YsM-RZ-t4H" secondAttribute="bottom" constant="182" id="iul-LI-Syn"/>
@@ -350,13 +381,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-Tb-m2H">
-                                                    <rect key="frame" x="198" y="10" width="87.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <rect key="frame" x="198" y="10" width="96" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-t3-6ah">
-                                                    <rect key="frame" x="198" y="39" width="37" height="19.5"/>
+                                                    <rect key="frame" x="198" y="41.5" width="37" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -386,7 +417,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWa-Z0-vtJ">
                                                     <rect key="frame" x="15" y="5" width="44.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-Ug-Sp3">
@@ -422,7 +453,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuu-er-4oE">
                                                     <rect key="frame" x="15" y="5" width="99" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your card number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-ek-rY9" customClass="VSTextField" customModule="PokeCommerce" customModuleProvider="target">
@@ -434,7 +465,7 @@
                                                         <outlet property="delegate" destination="GBy-z3-tbs" id="HAq-bM-uTB"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CCV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-Rp-3rM">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CCV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-Rp-3rM" customClass="VSTextField" customModule="PokeCommerce" customModuleProvider="target">
                                                     <rect key="frame" x="254.5" y="32" width="50.5" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -469,10 +500,10 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card expiration date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-pQ-TcZ">
                                                     <rect key="frame" x="15" y="5" width="153.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-bc-Hlg">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-bc-Hlg" customClass="VSTextField" customModule="PokeCommerce" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="32" width="97" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -481,7 +512,7 @@
                                                         <outlet property="delegate" destination="GBy-z3-tbs" id="Lzu-dk-q2q"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Zn-3n-qmU">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Zn-3n-qmU" customClass="VSTextField" customModule="PokeCommerce" customModuleProvider="target">
                                                     <rect key="frame" x="119" y="32" width="83.5" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -505,15 +536,15 @@
                             </tableViewSection>
                             <tableViewSection id="g0P-oo-r42">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="l9r-yj-N4c">
-                                        <rect key="frame" x="0.0" y="410" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="l9r-yj-N4c">
+                                        <rect key="frame" x="0.0" y="410" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l9r-yj-N4c" id="K2B-mr-sTW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Px-FSw">
-                                                    <rect key="frame" x="135" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="135" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="ObO-lg-FKz"/>
                                                         <constraint firstAttribute="height" constant="50" id="osY-pf-elj"/>
@@ -540,13 +571,13 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="CCV" destination="rsF-Rp-3rM" id="fte-JA-pKd"/>
+                        <outlet property="CCV" destination="rsF-Rp-3rM" id="vh1-8R-55c"/>
                         <outlet property="buyCell" destination="l9r-yj-N4c" id="tBe-Pq-BcX"/>
                         <outlet property="cardExperationCell" destination="GRd-nR-910" id="Xuu-XS-4m3"/>
-                        <outlet property="cardMonth" destination="gTS-bc-Hlg" id="3gv-4X-cGb"/>
+                        <outlet property="cardMonth" destination="gTS-bc-Hlg" id="XDl-Tf-etD"/>
                         <outlet property="cardNumber" destination="c2h-ek-rY9" id="bq5-ui-YBw"/>
                         <outlet property="cardNumberCell" destination="C6d-ks-PpQ" id="icf-cZ-smH"/>
-                        <outlet property="cardYear" destination="9Zn-3n-qmU" id="bCd-Te-WOD"/>
+                        <outlet property="cardYear" destination="9Zn-3n-qmU" id="0Ez-Xw-LbZ"/>
                         <outlet property="nameCell" destination="nFM-Qf-sNF" id="kwu-08-NK0"/>
                         <outlet property="pokemonCell" destination="SKC-CH-zhe" id="IpW-tw-68W"/>
                         <outlet property="pokemonImage" destination="uaN-f9-t48" id="J3r-PX-8dO"/>
@@ -613,6 +644,7 @@
         <image name="buy_icon" width="128" height="128"/>
         <image name="default-background" width="540" height="540"/>
         <image name="list_button" width="22" height="22"/>
+        <image name="pikachu-sad" width="300" height="405"/>
         <image name="placeholder" width="187" height="166"/>
         <image name="pokeball_background" width="640" height="360"/>
         <image name="purchase-background" width="400" height="250"/>

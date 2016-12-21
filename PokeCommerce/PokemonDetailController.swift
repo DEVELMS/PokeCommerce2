@@ -55,6 +55,7 @@ class PokemonDetailController: UIViewController {
     private func setBackground(_ types: [Kind]) {
     
         if types.contains(where: { $0.option == Kind.Option.fire }) {
+            self.price.textColor = .white
             self.background.image = #imageLiteral(resourceName: "fire-background")
         }
         else if types.contains(where: { $0.option == Kind.Option.flying }) {

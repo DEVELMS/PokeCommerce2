@@ -141,7 +141,6 @@ class VSTextField: UITextField {
         return VSTextField.makeOnlyDigitsString(_textWithoutSecureBullets)
     }
     
-    
     // MARK: - class methods
     class func makeOnlyDigitsString(_ string: String) -> String {
         let stringArray = string.components(separatedBy: CharacterSet.decimalDigits.inverted)

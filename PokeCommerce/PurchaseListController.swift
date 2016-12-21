@@ -32,6 +32,8 @@ class PurchaseListController: UITableViewController {
         
         guard let purchases = self.purchases else { return 0 }
         
+        if purchases.count == 0 { return 1 }
+        
         return purchases.count
     }
     
@@ -39,10 +41,13 @@ class PurchaseListController: UITableViewController {
         
         guard let purchases = self.purchases else { return UITableViewCell() }
         
+        if purchases.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PurchasesEmpty", for: indexPath)
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseCell.identifier, for: indexPath) as! PurchaseCell
-        
         cell.setContent(purchase: purchases[indexPath.row])
-        
         return cell
     }
 }
