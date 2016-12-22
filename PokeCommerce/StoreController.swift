@@ -56,6 +56,8 @@ class StoreController: UITableViewController, Buying {
         cardExperationCell.backgroundColor = .clear
         buyCell.backgroundColor = .clear
         
+        tableView.keyboardDismissMode = .onDrag
+        
         hideKeyboardWhenTappedAround()
     }
     
@@ -117,8 +119,7 @@ class StoreController: UITableViewController, Buying {
         if name.characters.count < 2 { nameCell.backgroundColor = errorColor }
         else { nameCell.backgroundColor = .clear }
         if number.characters.count < 16 { cardNumberCell.backgroundColor = errorColor }
-        else { cardNumberCell.backgroundColor = .clear }
-        if ccv.characters.count < 3 { cardNumberCell.backgroundColor = errorColor }
+        else if ccv.characters.count < 3 { cardNumberCell.backgroundColor = errorColor }
         else { cardNumberCell.backgroundColor = .clear }
         if month.characters.count < 2 { cardExperationCell.backgroundColor = errorColor }
         else if year.characters.count < 2 { cardExperationCell.backgroundColor = errorColor }

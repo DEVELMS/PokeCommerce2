@@ -47,7 +47,7 @@ class PurchaseListController: UITableViewController {
         
         if purchases?.count == 0 {
             
-            Alert.show(delegate: self, title: ";)", message: "You haven't purchases yet.", buttonTitle: "OK") { _ in }
+            Alert.show(delegate: self, title: ";)", message: "You haven't purchased yet.", buttonTitle: "OK") { _ in }
         }
         else {
             

@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Cb-a1-FHW" id="fI4-fG-otj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="221"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qd7-Eq-XbP">
@@ -268,7 +268,7 @@
                                 <rect key="frame" x="0.0" y="258" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFF-2V-EuK" id="5Rh-bu-W1O">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu-sad" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-Xj-uIg">
@@ -429,8 +429,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-t3-6ah">
-                                                    <rect key="frame" x="198" y="41.5" width="37" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-t3-6ah">
+                                                    <rect key="frame" x="198" y="41.5" width="117" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -438,6 +438,7 @@
                                             <constraints>
                                                 <constraint firstItem="Upq-Tb-m2H" firstAttribute="top" secondItem="uaN-f9-t48" secondAttribute="top" id="22N-kB-dey"/>
                                                 <constraint firstItem="zWD-t3-6ah" firstAttribute="top" secondItem="Upq-Tb-m2H" secondAttribute="bottom" constant="5" id="CO4-J6-fPB"/>
+                                                <constraint firstAttribute="trailing" secondItem="zWD-t3-6ah" secondAttribute="trailing" constant="5" id="RFx-E1-OOW"/>
                                                 <constraint firstItem="Upq-Tb-m2H" firstAttribute="leading" secondItem="uaN-f9-t48" secondAttribute="trailing" constant="8" id="Ruu-XQ-axe"/>
                                                 <constraint firstItem="zWD-t3-6ah" firstAttribute="leading" secondItem="uaN-f9-t48" secondAttribute="trailing" constant="8" id="hkF-Ij-f7F"/>
                                                 <constraint firstAttribute="bottom" secondItem="uaN-f9-t48" secondAttribute="bottom" constant="10" id="kY4-Yh-mQW"/>
