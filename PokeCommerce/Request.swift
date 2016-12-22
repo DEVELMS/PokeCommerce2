@@ -16,6 +16,8 @@ class Request: Requesting, URLS {
     
     static let sharedInstance = Request()
     
+    private init() {}
+    
     func APIRequest(method: HTTPMethod, endPoint: EndPoint, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
         
         let url = getUrl(endPoint)

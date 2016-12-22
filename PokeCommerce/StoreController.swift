@@ -132,7 +132,7 @@ class StoreController: UITableViewController, Buying {
         
         if checkFields() {
          
-            let purchase = Purchase()
+            let purchase = PurchaseRealm()
             purchase.name = pokemon.name
             purchase.price = priceString
             purchase.userName = userName.text!
@@ -169,7 +169,7 @@ class StoreController: UITableViewController, Buying {
     
     // MARK: Buying Delegate
     
-    internal func buyConfirmed(purchase: Purchase) {
+    internal func buyConfirmed(purchase: PurchaseRealm) {
         
         let realm = try! Realm()
         

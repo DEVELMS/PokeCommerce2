@@ -17,7 +17,7 @@ class CreditCardModal: UIViewController {
     @IBOutlet weak var clientName: UILabel!
     
     var delegate: Buying?
-    private var purchase: Purchase?
+    private var purchase: PurchaseRealm?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class CreditCardModal: UIViewController {
         year.text = purchase.year
     }
     
-    func configModal(_ sender: UIView, purchase: Purchase) {
+    func configModal(_ sender: UIView, purchase: PurchaseRealm) {
         
         guard let delegate = delegate else { return print("CreditCardModal delegate not setted") }
         

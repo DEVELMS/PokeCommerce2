@@ -12,7 +12,7 @@ import RealmSwift
 class PurchaseListController: UITableViewController {
 
     fileprivate var dataBase: Realm?
-    fileprivate var purchases: RealmSwift.Results<Purchase>?
+    fileprivate var purchases: RealmSwift.Results<PurchaseRealm>?
     fileprivate let rowHeight: CGFloat = 230
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class PurchaseListController: UITableViewController {
     
         guard let dataBase = self.dataBase else { return }
         
-        purchases = dataBase.objects(Purchase.self).sorted(byProperty: "date", ascending: false)
+        purchases = dataBase.objects(PurchaseRealm.self).sorted(byProperty: "date", ascending: false)
         
         tableView.reloadData()
     }

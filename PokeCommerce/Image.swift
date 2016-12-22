@@ -6,12 +6,13 @@
 //
 //
 
-//import SwiftyJSON
 import UIKit
 
 struct Image {
  
-    static let cache = NSCache<NSString, UIImage>()
+    private static let cache = NSCache<NSString, UIImage>()
+ 
+    private init() {}
     
     static func get(url: String, success: @escaping (_ image: UIImage) -> Void) {
         

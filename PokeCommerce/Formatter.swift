@@ -15,6 +15,8 @@ struct Formatter {
         case user = "dd/MM/yyyy"
     }
     
+    private init() {}
+    
     static func convert(date: String, from: DateType) -> String {
         
         let oldFormatter = DateFormatter()

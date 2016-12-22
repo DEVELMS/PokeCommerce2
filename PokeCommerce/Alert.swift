@@ -10,6 +10,8 @@ import UIKit
 
 struct Alert {
     
+    private init() {}
+    
     static func show(delegate: AnyObject,title: String, message: String, buttonTitle: String? = nil, hasChoice: Bool? = nil, ok: @escaping (Bool) -> Void) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

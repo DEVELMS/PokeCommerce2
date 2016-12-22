@@ -10,6 +10,8 @@ import Foundation
 
 struct Do {
     
+    private init() {}
+    
     static func wait(seconds: Double, completion: @escaping () -> Void) {
         
         let time = DispatchTime.now() + seconds

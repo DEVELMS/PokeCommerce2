@@ -37,13 +37,15 @@
 		008A08CF1E007391001BB1F9 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A08CE1E007391001BB1F9 /* ApplicationService.swift */; };
 		008A08DA1E00750F001BB1F9 /* PokemonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A08D81E00750F001BB1F9 /* PokemonCollectionCell.swift */; };
 		008A08DD1E008359001BB1F9 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A08DC1E008359001BB1F9 /* Kind.swift */; };
+		00BFC6B31E0C388B00EF697A /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFC6B21E0C388B00EF697A /* PurchaseService.swift */; };
+		00BFC6B51E0C38B800EF697A /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFC6B41E0C38B800EF697A /* Purchase.swift */; };
 		00EAB75B1E032DBD0024949E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB75A1E032DBD0024949E /* UIColorExtension.swift */; };
 		00EAB75D1E0338AF0024949E /* StoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB75C1E0338AF0024949E /* StoreController.swift */; };
 		00EAB76B1E0485A60024949E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76A1E0485A60024949E /* RealmSwift.framework */; };
 		00EAB76C1E0485A60024949E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76A1E0485A60024949E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00EAB76F1E0485A90024949E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; };
 		00EAB7701E0485A90024949E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00EAB76E1E0485A90024949E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00EAB7721E0488700024949E /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7711E0488700024949E /* Purchase.swift */; };
+		00EAB7721E0488700024949E /* PurchaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7711E0488700024949E /* PurchaseRealm.swift */; };
 		00EAB77A1E0834D10024949E /* CreditCardModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB7781E0834D10024949E /* CreditCardModal.swift */; };
 		00EAB77B1E0834D10024949E /* CreditCardModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00EAB7791E0834D10024949E /* CreditCardModal.xib */; };
 		00EAB77D1E084C0E0024949E /* Buying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB77C1E084C0E0024949E /* Buying.swift */; };
@@ -101,11 +103,13 @@
 		008A08CE1E007391001BB1F9 /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		008A08D81E00750F001BB1F9 /* PokemonCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionCell.swift; sourceTree = "<group>"; };
 		008A08DC1E008359001BB1F9 /* Kind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		00BFC6B21E0C388B00EF697A /* PurchaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
+		00BFC6B41E0C38B800EF697A /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		00EAB75A1E032DBD0024949E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		00EAB75C1E0338AF0024949E /* StoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreController.swift; sourceTree = "<group>"; };
 		00EAB76A1E0485A60024949E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		00EAB76E1E0485A90024949E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		00EAB7711E0488700024949E /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		00EAB7711E0488700024949E /* PurchaseRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRealm.swift; sourceTree = "<group>"; };
 		00EAB7781E0834D10024949E /* CreditCardModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardModal.swift; sourceTree = "<group>"; };
 		00EAB7791E0834D10024949E /* CreditCardModal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardModal.xib; sourceTree = "<group>"; };
 		00EAB77C1E084C0E0024949E /* Buying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buying.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				0038378B1E01ADA800F28163 /* SectionService.swift */,
 				008A08C81E00733F001BB1F9 /* PokemonService.swift */,
 				0038378F1E01B42300F28163 /* KindService.swift */,
+				00BFC6B21E0C388B00EF697A /* PurchaseService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -244,7 +249,8 @@
 				008A08CA1E007372001BB1F9 /* Section.swift */,
 				008A08CB1E007372001BB1F9 /* Pokemon.swift */,
 				008A08DC1E008359001BB1F9 /* Kind.swift */,
-				00EAB7711E0488700024949E /* Purchase.swift */,
+				00EAB7711E0488700024949E /* PurchaseRealm.swift */,
+				00BFC6B41E0C38B800EF697A /* Purchase.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -398,11 +404,13 @@
 				00EAB77A1E0834D10024949E /* CreditCardModal.swift in Sources */,
 				0038378C1E01ADA800F28163 /* SectionService.swift in Sources */,
 				008A08C21E00729A001BB1F9 /* Formatter.swift in Sources */,
-				00EAB7721E0488700024949E /* Purchase.swift in Sources */,
+				00EAB7721E0488700024949E /* PurchaseRealm.swift in Sources */,
+				00BFC6B51E0C38B800EF697A /* Purchase.swift in Sources */,
 				00EAB75D1E0338AF0024949E /* StoreController.swift in Sources */,
 				003837941E01BB9A00F28163 /* ApplicationController.swift in Sources */,
 				C27ED3F11E05BBE100B08A65 /* PurchaseCell.swift in Sources */,
 				00EAB75B1E032DBD0024949E /* UIColorExtension.swift in Sources */,
+				00BFC6B31E0C388B00EF697A /* PurchaseService.swift in Sources */,
 				00EAB77D1E084C0E0024949E /* Buying.swift in Sources */,
 				C27ED3F31E05BC4A00B08A65 /* PurchaseListController.swift in Sources */,
 				0038379F1E01D7EE00F28163 /* UIImageView+SwiftyGif.swift in Sources */,

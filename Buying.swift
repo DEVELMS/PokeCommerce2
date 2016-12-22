@@ -10,5 +10,5 @@ import UIKit
 
 protocol Buying: UIPopoverPresentationControllerDelegate {
 
-    func buyConfirmed(purchase: Purchase)
+    func buyConfirmed(purchase: PurchaseRealm)
 }

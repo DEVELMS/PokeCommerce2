@@ -17,7 +17,7 @@ class PurchaseCell: UITableViewCell {
     @IBOutlet weak var cardNumber: UILabel!
     @IBOutlet weak var date: UILabel!
 
-    func setContent(purchase: Purchase) {
+    func setContent(purchase: PurchaseRealm) {
         
         self.name.text = purchase.name
         self.price.text = purchase.price
