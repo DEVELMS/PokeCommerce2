@@ -249,8 +249,8 @@
 				008A08CA1E007372001BB1F9 /* Section.swift */,
 				008A08CB1E007372001BB1F9 /* Pokemon.swift */,
 				008A08DC1E008359001BB1F9 /* Kind.swift */,
-				00EAB7711E0488700024949E /* PurchaseRealm.swift */,
 				00BFC6B41E0C38B800EF697A /* Purchase.swift */,
+				00EAB7711E0488700024949E /* PurchaseRealm.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

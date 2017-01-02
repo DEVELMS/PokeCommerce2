@@ -24,8 +24,7 @@ struct Image {
             success: { image in
                 
                 guard let downloadedImage = UIImage(data: (image as! Data)) else {
-                    print("downloadedImage is not a valid image")
-                    return
+                    return print("downloadedImage is not a valid image")
                 }
                 
                 cache.setObject(downloadedImage, forKey: url as NSString)
